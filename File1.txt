@@ -6,7 +6,14 @@ Line5
 Line6
 line7
 line8
+<<<<<<< HEAD
 line9
 line10
 line11
 line12
+=======
+line9[C[C
+Line13
+Line14
+Line15
+>>>>>>> 92aba54 (Update file for resolving merge conflict)
