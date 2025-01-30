@@ -1,0 +1,20 @@
+name: workflow variables
+on:
+ push:
+  branches:
+   - main
+   - dev
+
+jobs:
+ echo-deploy:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checkout
+     uses: actions/checkout@v4.2.2
+   - name: Deploy Context
+     run: |
+      if[[ "${{github.ref}}" == "refs/heads/main" ]]; then
+       echo "DEPLOY_ENV=production"
+      elif [["${{github.ref}}" == "refs/heads/dev" ]]; then
+       echo "DEPLOY_ENV=staging"
+      fi
