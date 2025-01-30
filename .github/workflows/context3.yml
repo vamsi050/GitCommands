@@ -14,5 +14,5 @@ jobs:
    - name: Context Variables
      run: |
       echo "Event name is ${{github.event_name}}"
-      echo "Actor is ${{github.actor}}
+      echo "Actor is ${{github.actor}}"
       echo "USER=${{github.actor}}"
