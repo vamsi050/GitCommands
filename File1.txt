@@ -7,3 +7,4 @@ Line6
 line7
 line8
 line9[C[C
+Added new line
