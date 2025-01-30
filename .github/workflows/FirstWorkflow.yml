@@ -1,1 +1,13 @@
+name: First Workflow
 
+on: push
+
+jobs:
+ job1:
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "display the workflow for ubuntu"
+ job2:
+  runs-on: window-latest
+  steps:
+   - run: echo "display the workflow for window"
