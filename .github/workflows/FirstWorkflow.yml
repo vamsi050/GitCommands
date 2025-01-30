@@ -2,14 +2,10 @@ name: First Workflow
 
 run-name: ${{github.actor}}
 
-on: push
+on: pull_request
 
 jobs:
  job1:
   runs-on: ubuntu-latest
   steps:
    - run: echo "display the workflow for ubuntu"
- job2:
-  runs-on: window-latest
-  steps:
-   - run: echo "display the workflow for window"
