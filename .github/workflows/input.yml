@@ -1,0 +1,16 @@
+name: input
+ run-name: Input - ${{inputs.debug}}
+on:
+ workflow_dispatch:
+  inputs:
+   debug:
+    type: boolean
+    required: false
+
+jobs:
+ echo-input:
+  runs-on: ubuntu-latest
+   steps:
+     echo "check the input"
+ 
+ 
