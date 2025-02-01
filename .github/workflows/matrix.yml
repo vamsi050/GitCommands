@@ -1,0 +1,23 @@
+name: matrix
+
+on:
+ workflow_dispatch
+
+jobs:
+   echo-matrix:
+    runs-on: ${{matrix.os}}
+    strategy:
+     matrix:
+      os:
+       - ubuntu-latest
+       - windows
+      node-version:
+       - v22
+       - v21
+    steps:
+     - uses: actions/setup-node@v4.2.0
+       with:
+         node-version: ${{matrix.node-version}}
+     - run: echo "Operating system is ${{matrix.os}} and node version is ${{matrix.node-version}}"
+    
+   
