@@ -1,0 +1,21 @@
+name: needs
+run-name: Input DEBUG - ${{inputs.debug}}
+on:
+ workflow_dispatch:
+  inputs:
+   debug:
+    type: boolean
+    required: false
+
+jobs:
+ echo-data:
+  runs-on: ubuntu-latest
+  steps:
+   - run:  echo "check the input"
+ echo-display:
+  needs: echo-data
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "Print data"
+ 
+ 
