@@ -16,4 +16,4 @@ jobs:
    - run: echo "environment context ${{env.VAR}}"
      env:
       VAR: 'test3'
-   - run: echo "vars in global level is {{vars.vars1}}"
+   - run: echo "vars in global level is ${{vars.vars1}}"
