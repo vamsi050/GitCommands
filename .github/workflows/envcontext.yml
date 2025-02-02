@@ -13,6 +13,6 @@ jobs:
    VAR: 'test2'
   runs-on: ubuntu-latest
   steps:
-   - run: echo "environment context ${{env.VAR}}
+   - run: echo "environment context ${{env.VAR}}"
      env:
       VAR: 'test3'
