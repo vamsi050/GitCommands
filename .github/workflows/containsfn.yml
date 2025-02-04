@@ -1,8 +1,9 @@
 name: contains_expression
 
 on:
+ push:
  issues:
-
+ 
 jobs:
   echo-contains:
    runs-on: ubuntu-latest
