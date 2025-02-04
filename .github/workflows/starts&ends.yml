@@ -1,0 +1,20 @@
+name: starts and ends function
+
+on:
+ push:
+  branches:
+   - 'feature/*'
+jobs:
+ echo-starts-ends:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Check branch conditions
+     run: echo "runs on ${{github.ref_name}}"
+
+   - name: Starts with check
+     if: startsWith(github.ref_name, 'feature')
+     run: echo "This branch starts with 'feature'"
+
+   - name: Endswith check
+     if: endsWith(github.ref_name, 'ter')
+     run: echo "this branch name ends with 'ter'"
