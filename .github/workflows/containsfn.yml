@@ -1,12 +1,14 @@
 name: contains_expression
 
 on:
- push:
+ issues:
 
 jobs:
   echo-contains:
-  runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
    steps:
    - run: echo "Contains expression check"
+   - name: Contain function
      if: ${{contains(github.event.issue.labels.*.name, 'bug')}}
+     run: echo "Labels contains bug"
     
