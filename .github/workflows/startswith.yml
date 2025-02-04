@@ -16,5 +16,5 @@ jobs:
      run: echo "This branch starts with 'feature'"
 
    - name: Endswith check
-     if: endsWith(github.ref_name, 'ter')
-     run: echo "this branch name ends with 'ter'"
+     if: endsWith(github.ref_name, 'ter-1')
+     run: echo "this branch name ends with 'register-1'"
